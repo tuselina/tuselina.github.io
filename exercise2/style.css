@@ -10,7 +10,7 @@
   --col-01:#3e2946;
   --col-02:#e7db95;
   --col-03:#8453cc;
-  --col-04:#756188;
+  --col-04:#dbd79b;
   font-size: 20px;
 }
 
@@ -30,7 +30,7 @@ a:hover {
     color: var(--col-03);
     font-size: 15px;
   }
-  20% {
+  30% {
     color:rgb(247, 240, 144);
   }
   100% {
