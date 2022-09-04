@@ -1,0 +1,185 @@
+*{
+  box-sizing: border-box;
+  background-origin: border-box;
+  margin: 0;
+}
+
+:root{
+  /* first two colours come from Kuroi's Manga Pallete Palette */
+  /* https://lospec.com/palette-list/manga-pallete */
+  --col-01:#3e2946;
+  --col-02:#e7db95;
+  --col-03:#725d91;
+  --col-04:#9e83b8;
+  font-size: 10px;
+}
+
+body{
+  padding: 1rem;
+  background-color: var(--col-02);
+  color: var(--col-01);
+  transition: color ease-in 1s;
+}
+
+a:hover {
+  animation: colourCycle 5s infinite;
+}
+
+@keyframes colourCycle {
+  0% {
+    color: var(--col-03);
+    font-size: 15px;
+  }
+  20% {
+    color:rgb(250, 250, 250);
+  }
+  100% {
+    color: var(--col-04);
+  }
+}
+
+section{
+  margin-bottom: 2rem;
+}
+
+h1{
+  font-size: 3rem;
+}
+
+h2{
+  font-size: 2rem;
+}
+
+p{
+  font-size: 1rem;
+  margin-top: 1rem;
+}
+
+figcaption{
+  width: fit-content;
+}
+
+dl ul{
+  margin-bottom: 0;
+}
+
+li{
+  font-size: 1rem;
+}
+
+dd{
+  padding-left: 60px;
+}
+
+li ul{
+  padding-left: 40px;
+}
+
+.img-wrapper{
+  width: 100%;
+  margin-bottom: 1.5rem;
+}
+
+.img-figure{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.article-img{
+  width: 80%;
+}
+
+.res-columns{
+  column-width: 25rem;
+}
+
+/* medium devices 600 - 992 */
+@media only screen and (min-width: 600px) {
+  :root{
+    font-size: 20px;
+  }
+  
+  .img-wrapper{
+    width: 75%;
+    margin: 1.5rem auto;
+  }
+}
+
+/* medium devices 992 + */
+@media only screen and (min-width: 992px) {
+  :root{
+    font-size: 24px;
+  }
+
+  .img-wrapper{
+    max-width: fit-content;
+    float: right;
+    margin: 1.5rem;
+  }
+}
+
+@media (prefers-reduced-motion) {
+  a:hover {
+    animation: none;
+  }
+}
+
+.button {
+  background-color: rgb(234, 226, 238);
+  color: black;
+  border: 1px solid #5645b8; /* Purple */
+  color: white;
+  padding: 5px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 5px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+.button2 { background-color: rgb(234, 226, 238);
+  color: black;
+  border: 1px solid #5645b8; /* Purple */
+  transition-duration: 0.4s;
+}
+
+.button:hover {
+  background-color: #b2a8ca; /* Light purple */
+  color: white;
+}
+
+
+.button3 {background-color: rgb(234, 226, 238);
+  color: black;
+  border: 1px solid #5645b8; /* Purple */}
+
+.button4 {background-color: rgb(234, 226, 238);
+  color: black;
+  border: 1px solid #5645b8; /* Purple */}  
+
+.button5 {background-color: rgb(234, 226, 238);
+  color: black;
+  border: 1px solid #5645b8; /* Purple */} 
+  
+.button6 {background-color: rgb(234, 226, 238);
+  color: black;
+  border: 1px solid #5645b8; /* Purple */} 
+
+
+.button {font-size: 15px;}
+.button2 {font-size: 15px;}
+.button3 {font-size: 15px;}
+.button4 {font-size: 15px;}
+.button5 {font-size: 15px;}
+.button6 {font-size: 15px;}
+
+.button {border-radius: 8px;}
+.button2 {border-radius: 8px;}
+.button3 {border-radius: 8px;}
+.button4 {border-radius: 8px;}
+.button5 {border-radius: 8px;}
+.button6 {border-radius: 8px;}
+
+
