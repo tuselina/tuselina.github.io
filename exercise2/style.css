@@ -11,7 +11,7 @@
   --col-02:#e7db95;
   --col-03:#725d91;
   --col-04:#9e83b8;
-  font-size: 5px;
+  font-size: 20px;
 }
 
 body{
@@ -31,7 +31,7 @@ a:hover {
     font-size: 15px;
   }
   20% {
-    color:rgb(250, 250, 250);
+    color:rgb(247, 240, 144);
   }
   100% {
     color: var(--col-04);
