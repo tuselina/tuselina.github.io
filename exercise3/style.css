@@ -74,6 +74,8 @@ summary {
   gap: 1rem;
   flex-wrap: wrap;
 }
+
+/* min-height is used to adjust text correctly for Chrome web browser users */
 .RecipeCardWrapper{
   min-height: 30rem;
   padding: 1rem;
@@ -82,6 +84,8 @@ summary {
   display: flex;
   flex-direction: column;
 }
+
+/* cursor is used to change the cursor when it is hovering over an element in this case to a pointer to indicate image/recipe card can be clicked on and it can also change the border*/
 .RecipeCardWrapper:hover{
   border: dotted var(--col-02) 2px;
   cursor: pointer;

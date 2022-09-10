@@ -16,3 +16,4 @@ for(var fruit of fruitArray){
     }
 }
 
+//this connects array function to the filter function which is a formula that places various variables to be classed together with a common name
