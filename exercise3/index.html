@@ -35,10 +35,21 @@
       </details>
 
       <details class="FilterCategoryWrapper">
-        <summary>Meat dishes</summary>
-        <button class="FilterSelector" id="kla-author" onclick='filterCategory("meat", "yes")'>J. Kenji López-Alt</button>
+        <summary>Savoury</summary>
+        <button class="FilterSelector" id="kla-european" onclick='filterCategory("veg", "yes")'>Vegetarian</button>
+        <button class="FilterSelector" id="clm-european" onclick='filterCategory("meat", "yes")'>Meat</button>
+        <button class="FilterSelector" id="hm-european" onclick='filterCategory("europeansavoury", "yes")'>European</button>
+        <button class="FilterSelector" id="hm-european" onclick='filterCategory("asiansavoury", "yes")'>Asian</button>
+      </details>
+
+      <details class="FilterCategoryWrapper">
+        <summary>Sweet</summary>
+        <button class="FilterSelector" id="kla-asian" onclick='filterCategory("asiandessert", "yes")'>Asian</button>
+        <button class="FilterSelector" id="m-asian" onclick='filterCategory("europeandessert", "yes")'>European</button>
+        <button class="FilterSelector" id="hm-asian" onclick='filterCategory("other", "yes")'>Other</button>
       </details>
       
+
     </div>
 
     <hr />
@@ -48,7 +59,8 @@
       <div class="RecipeCardWrapper"
            onclick="window.open(`https://www.abc.net.au/everyday/baked-puttanesca-risotto-with-tomato-olives-lemon-parsley-recipe/11270338`);"
            data-author="HM"
-           data-meat="yes"
+           data-europeansavoury="yes"
+           data-veg="yes"
       >
 
         <img class="RecipeImg" src="./images/Puttanesca.jpg" alt="bowl of puttanesca pasta" />
@@ -75,7 +87,9 @@
       <div class="RecipeCardWrapper"
            onclick="window.open(`https://www.abc.net.au/everyday/caprese-salad-slow-roasted-tomato-rocket-basil-gremolata-recipe/10776846`);"
            data-author="HM"
-           data-meat="yes"
+           data-europeansavoury="yes"
+           data-veg="yes"
+           
       >
 
         <img class="RecipeImg" src="./images/Caprese.jpg" alt="plate of caprese salad" />
@@ -102,6 +116,8 @@
       <div class="RecipeCardWrapper"
            onclick="window.open(`https://www.seriouseats.com/crispy-enoki-and-onion-fritter-with-thai-curry-mayo-recipe`);"
            data-author="KLA"
+           data-asiansavoury="yes"
+           data-veg="yes"
       >
 
         <img class="RecipeImg" src="./images/Enoki.jpg" alt="enoki mushrooms" />
@@ -128,6 +144,7 @@
       <div class="RecipeCardWrapper"
            onclick="window.open(`https://www.maangchi.com/recipe/jjinppang`);"
            data-author="M"
+           data-asiandessert="yes"
       >
 
         <img class="RecipeImg" src="./images/Red_Bean_Bun.jpg" alt="ripped open steamed bun with red bean paste" />
@@ -153,6 +170,7 @@
       <div class="RecipeCardWrapper"
            onclick="window.open(`https://www.seriouseats.com/the-food-lab-best-chocolate-chip-cookie-recipe`);"
            data-author="KLA"
+           data-other="yes"
       >
 
         <img class="RecipeImg" src="./images/Cookies.jpg" alt="plate of chocolate chip cookies" />
@@ -177,6 +195,7 @@
       <div class="RecipeCardWrapper"
            onclick="window.open(`https://www.seriouseats.com/grilled-cheese-with-kimchi-recipe`);"
            data-author="KLA"
+           data-asiansavoury="yes"
       >
 
         <img class="RecipeImg" src="./images/Grilled_Cheese.jpg" alt="grilled cheese sandwich with pickles" />
@@ -203,6 +222,7 @@
       <div class="RecipeCardWrapper"
            onclick="window.open(`https://www.patreon.com/posts/recipe-hands-off-60369279`);"
            data-author="CLM"
+           data-meat="yes"
       >
 
         <img class="RecipeImg" src="./images/Pork_Beans.jpg" alt="pot of pork and beans" />
@@ -228,7 +248,7 @@
       <div class="RecipeCardWrapper"
            onclick="window.open(`https://www.maangchi.com/recipe/kimchijeon`);"
            data-author="M"
-           data-asian="yes"
+           data-asiansavoury="yes"
       >
 
         <img class="RecipeImg" src="./images/Kimchi_Pancake.jpg" alt="kimchi pancake with bowl of dipping sauce" />
@@ -253,6 +273,8 @@
       <div class="RecipeCardWrapper"
            onclick="window.open(`https://www.seriouseats.com/shakshuka-north-african-shirred-eggs-tomato-pepper-recipe`);"
            data-author="KLA"
+           data-asiansavoury="yes"
+           data-veg="yes"
       >
 
         <img class="RecipeImg" src="./images/Shakshuka.jpg" alt="pan filled with shakshuka" />
@@ -277,6 +299,7 @@
       <div class="RecipeCardWrapper"
            onclick="window.open(`https://www.maangchi.com/recipe/patbingsu`);"
            data-author="M"
+           data-asiandessert="yes"   
       >
 
         <img class="RecipeImg" src="./images/Patbingsu.jpg" alt="bowl of shaved ice topped with sweet red beans and fruit" />
@@ -301,6 +324,8 @@
       <div class="RecipeCardWrapper"
            onclick="window.open(`https://www.patreon.com/posts/pasta-with-sauce-45042575`);"
            data-author="CLM"
+           data-europeansavoury="yes"
+           data-veg="yes"
       >
 
         <img class="RecipeImg" src="./images/Cauliflower_Spaghetti.jpg" alt="bowl of spaghettie with cauliflower sauce" />
@@ -325,6 +350,8 @@
       <div class="RecipeCardWrapper"
            onclick="window.open(`https://www.maangchi.com/recipe/yangnyeom-tongdak`);"
            data-author="M"
+           data-asiansavoury="yes"
+           data-meat="yes"
       >
 
         <img class="RecipeImg" src="./images/Korean_Fried_Chicken.jpg" alt="plate of fried chicken with pickles and kimchi" />
@@ -351,6 +378,8 @@
       <div class="RecipeCardWrapper"
            onclick="window.open(`https://www.seriouseats.com/ultimate-beef-stroganof-recipe`);"
            data-author="KLA"
+           data-europeansavoury="yes"
+           data-meat="yes"
       >
 
         <img class="RecipeImg" src="./images/Stroganoff.jpg" alt="bowl of beef stroganoff pasta" />
@@ -377,6 +406,7 @@
       <div class="RecipeCardWrapper"
            onclick="window.open(`https://www.patreon.com/posts/recipe-vanilla-60100711`);"
            data-author="CLM"
+           data-europeandessert="yes"
       >
 
         <img class="RecipeImg" src="./images/Pear_Tart.jpg" alt="pear tart on a table" />
@@ -403,6 +433,8 @@
       <div class="RecipeCardWrapper"
            onclick="window.open(`https://www.abc.net.au/everyday/vegetarian-carbonara-with-mushrooms-and-miso/12426392`);"
            data-author="HM"
+           data-europeansavoury="yes"
+           data-veg="yes"
       >
 
         <img class="RecipeImg" src="./images/Mushroom_Carbonara.jpg" alt="pan filled with mushroom carbonara pasta" />

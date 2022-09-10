@@ -7,7 +7,7 @@ function filterCategory(filterSelection, filterBy){
         if(listItem.dataset[filterSelection] === filterBy){
             listItem.style.display = "flex";
         } else {
-            listItem.styLe.display = "none";
+            listItem.style.display = "none";
         }
         
     }
