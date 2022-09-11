@@ -33,23 +33,25 @@
         <button class="FilterSelector" id="clm-author" onclick='filterCategory("author", "CLM")'>Carla Lalli Music</button>
         <button class="FilterSelector" id="clm-author" onclick='filterAll()'>All</button>
       </details>
-
+      <!-- this category is for identifying and grouping the different authors -->
       <details class="FilterCategoryWrapper">
         <summary>Savoury</summary>
-        <button class="FilterSelector" id="kla-european" onclick='filterCategory("veg", "yes")'>Vegetarian</button>
-        <button class="FilterSelector" id="clm-european" onclick='filterCategory("meat", "yes")'>Meat</button>
+        <button class="FilterSelector" id="kla-veg" onclick='filterCategory("veg", "yes")'>Vegetarian</button>
+        <button class="FilterSelector" id="clm-meat" onclick='filterCategory("meat", "yes")'>Meat</button>
         <button class="FilterSelector" id="hm-european" onclick='filterCategory("europeansavoury", "yes")'>European</button>
-        <button class="FilterSelector" id="hm-european" onclick='filterCategory("asiansavoury", "yes")'>Asian</button>
+        <button class="FilterSelector" id="hm-asian" onclick='filterCategory("asiansavoury", "yes")'>Asian</button>
       </details>
-
+        <!-- in filter category the code brackets after it is important, the category name and yes indicates what recipe card's is wanted to be displayed depending on which title button is being clicked on -->
+        <!-- many different filter category types can be applied to one recipecardwrapper -->
       <details class="FilterCategoryWrapper">
         <summary>Sweet</summary>
         <button class="FilterSelector" id="kla-asian" onclick='filterCategory("asiandessert", "yes")'>Asian</button>
-        <button class="FilterSelector" id="m-asian" onclick='filterCategory("europeandessert", "yes")'>European</button>
-        <button class="FilterSelector" id="hm-asian" onclick='filterCategory("other", "yes")'>Other</button>
+        <button class="FilterSelector" id="m-european" onclick='filterCategory("europeandessert", "yes")'>European</button>
+        <button class="FilterSelector" id="hm-other" onclick='filterCategory("other", "yes")'>Other</button>
       </details>
 
-      <!-- I have categorised and separated dishes into savoury and desserts/sweets. Sub-categories are vegetarian, meat, European, Asian and other -->
+      <!-- I have categorised and separated dishes into savoury and desserts/sweets.  -->
+      <!-- I separated the two groups into sub-categories such as vegetarian savoury dishes, meat savoury dishes, European sweet and savoury dishes, Asian sweet and savoury dishes and other -->
       
 
     </div>
@@ -64,7 +66,7 @@
            data-europeansavoury="yes"
            data-veg="yes"
       >
-      <!-- list all data categories that apply to this specific dish -->
+      <!-- list all data categories that apply to this specific dish which is european savoury and vegetarian dish-->
 
         <img class="RecipeImg" src="./images/Puttanesca.jpg" alt="bowl of puttanesca pasta" />
 
@@ -94,7 +96,7 @@
            data-veg="yes"
 
       >
-              <!-- Placed data category identifier -->
+              <!-- Placed data category identifier for author, european savoury and vegetarian dish -->
         <img class="RecipeImg" src="./images/Caprese.jpg" alt="plate of caprese salad" />
 
         <p class="attribution">
@@ -122,7 +124,7 @@
            data-asiansavoury="yes"
            data-veg="yes"
       >
-
+        <!-- Placed data category identifier for the author and is an asian savoury and vegetarian dish -->
         <img class="RecipeImg" src="./images/Enoki.jpg" alt="enoki mushrooms" />
 
         <p class="attribution">
@@ -149,6 +151,7 @@
            data-author="M"
            data-asiandessert="yes"
       >
+      <!-- Placed data category identifier for the author and is an asian dessert -->
 
         <img class="RecipeImg" src="./images/Red_Bean_Bun.jpg" alt="ripped open steamed bun with red bean paste" />
 
@@ -175,6 +178,7 @@
            data-author="KLA"
            data-other="yes"
       >
+      <!-- Placed data category identifier for the author and doesn't fit into any categories available therefore it is placed in the other category in sweet column -->
 
         <img class="RecipeImg" src="./images/Cookies.jpg" alt="plate of chocolate chip cookies" />
 
@@ -200,7 +204,7 @@
            data-author="KLA"
            data-asiansavoury="yes"
       >
-
+        <!-- Placed data category identifier for the author and is an asian savoury dish, kimchi contains fish sauce and shrimp paste therefore it is not vegetarian -->
         <img class="RecipeImg" src="./images/Grilled_Cheese.jpg" alt="grilled cheese sandwich with pickles" />
 
         <p class="attribution">
@@ -227,6 +231,7 @@
            data-author="CLM"
            data-meat="yes"
       >
+      <!-- Placed data category identifier for the author and is a savoury meat dish -->
 
         <img class="RecipeImg" src="./images/Pork_Beans.jpg" alt="pot of pork and beans" />
 
@@ -253,7 +258,7 @@
            data-author="M"
            data-asiansavoury="yes"
       >
-
+        <!-- Placed data category identifier for the author and is an asian savoury dish, kimchi contains fish sauce and shrimp paste therefore it is not vegetarian -->
         <img class="RecipeImg" src="./images/Kimchi_Pancake.jpg" alt="kimchi pancake with bowl of dipping sauce" />
 
         <p class="attribution">
@@ -279,6 +284,7 @@
            data-asiansavoury="yes"
            data-veg="yes"
       >
+      <!-- Placed data category identifier for the author and is an asian savoury and vegetarian dish as Africa is a part of asia -->
 
         <img class="RecipeImg" src="./images/Shakshuka.jpg" alt="pan filled with shakshuka" />
 
@@ -304,6 +310,7 @@
            data-author="M"
            data-asiandessert="yes"   
       >
+      <!-- Placed data category identifier for the author and is an asian dessert dish -->
 
         <img class="RecipeImg" src="./images/Patbingsu.jpg" alt="bowl of shaved ice topped with sweet red beans and fruit" />
 
@@ -330,6 +337,7 @@
            data-europeansavoury="yes"
            data-veg="yes"
       >
+      <!-- Placed data category identifier for the author and is an european savoury and vegetarian dish -->
 
         <img class="RecipeImg" src="./images/Cauliflower_Spaghetti.jpg" alt="bowl of spaghettie with cauliflower sauce" />
 
@@ -356,6 +364,7 @@
            data-asiansavoury="yes"
            data-meat="yes"
       >
+      <!-- Placed data category identifier for the author and is an asian savoury and meat dish -->
 
         <img class="RecipeImg" src="./images/Korean_Fried_Chicken.jpg" alt="plate of fried chicken with pickles and kimchi" />
 
@@ -384,6 +393,7 @@
            data-europeansavoury="yes"
            data-meat="yes"
       >
+      <!-- Placed data category identifier for the author and is a european savoury and meat dish -->
 
         <img class="RecipeImg" src="./images/Stroganoff.jpg" alt="bowl of beef stroganoff pasta" />
 
@@ -411,6 +421,7 @@
            data-author="CLM"
            data-europeandessert="yes"
       >
+      <!-- Placed data category identifier for the author and is a european dessert -->
 
         <img class="RecipeImg" src="./images/Pear_Tart.jpg" alt="pear tart on a table" />
 
@@ -439,6 +450,7 @@
            data-europeansavoury="yes"
            data-veg="yes"
       >
+      <!-- Placed data category identifier for the author and is a european savoury and vegetarian dish -->
 
         <img class="RecipeImg" src="./images/Mushroom_Carbonara.jpg" alt="pan filled with mushroom carbonara pasta" />
 

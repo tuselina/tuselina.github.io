@@ -1,6 +1,6 @@
 function filterCategory(filterSelection, filterBy){
     // filter selection is category
-    //filter by is thing to match
+    // filter by is thing to match
     let itemsToFilter = Array.from(document.getElementsByClassName("RecipeCardWrapper")); 
     for(let listItem of itemsToFilter){
         if(listItem.dataset[filterSelection] === filterBy){
@@ -12,7 +12,7 @@ function filterCategory(filterSelection, filterBy){
     }
 }
 
-// this filter uses an if statement function that categories what RecipeCardWrappers to display and what not to display
+// this filter uses an if statement function that categories what RecipeCardWrappers to display and what not to , if the filter category name is selected the item will be displayed shown as flex and none if not
 
 function filterAll(){
     let itemsToFilter = Array.from(document.getElementsByClassName("RecipeCardWrapper"));
