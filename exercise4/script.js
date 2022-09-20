@@ -20,32 +20,35 @@ let isPlaying = false;
 let isRandom = false;
 let updateTimer;
 
+// This relates to the HTML which identifies the titles and buttons of the music player
 const music_list = [
     {
-        img : 'images/hes.jpg',
+        img : 'images/faded.png',
         name : 'Hes',
         artist : 'Digitaloceanspaces',
         music : 'music/p-hase_Hes.mp3'
     },
     {
-        img : 'images/dry.jpg',
+        img : 'images/fallingdown.jpg',
         name : 'Dry Down feat Ben Snaath',
         artist : 'Digitaloceanspaces',
         music : 'music/p-hase_Dry-Down-feat-Ben-Snaath.mp3'
     },
     {
-        img : 'images/leapt.jpg',
+        img : 'images/ratherbe.jpg',
         name : 'Leapt',
         artist : 'Digitaloceanspaces',
         music : 'music/p-hase_Leapt.mp3'
     },
     {
-        img : 'images/water.jpg',
+        img : 'images/stay.png',
         name : 'Water',
         artist : 'Digitaloceanspaces',
         music : 'music/p-hase_Water-Feature.mp3'
     }
 ];
+// This is the music list of each different track with the allocated image png or jpg, name, artist and mp3 track is identified
+// Images and music files are being held in sub-folders images and music in the root folder 
 
 loadTrack(track_index);
 
@@ -66,6 +69,7 @@ function loadTrack(track_index){
     curr_track.addEventListener('ended', nextTrack);
     random_bg_color();
 }
+//The music list is connected to the title text content of the current music source track that is being played in the music list 
 
 function random_bg_color(){
     let hex = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'a', 'b', 'c', 'd', 'e'];
@@ -86,6 +90,7 @@ function random_bg_color(){
     let gradient = 'linear-gradient(' + angle + ',' + Color1 + ', ' + Color2 + ")";
     document.body.style.background = gradient;
 }
+// This function is controlling the gradient background colour which is chosen at random after a song is changed
 function reset(){
     curr_time.textContent = "00:00";
     total_duration.textContent = "00:00";
@@ -124,6 +129,7 @@ function pauseTrack(){
     wave.classList.remove('loader');
     playpause_btn.innerHTML = '<i class="fa fa-play-circle fa-5x"></i>';
 }
+// The play and pause button is a circle button that is interchangable between the two options 
 function nextTrack(){
     if(track_index < music_list.length - 1 && isRandom === false){
         track_index += 1;
