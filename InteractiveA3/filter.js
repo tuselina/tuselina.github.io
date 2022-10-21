@@ -1,25 +1,96 @@
-function filterCategory(filterSelection, filterBy){
-    // filter selection is category
-    // filter by is thing to match
-    let itemsToFilter = Array.from(document.getElementsByClassName("ItemCardWrapper")); 
-    for(let listItem of itemsToFilter){
-        if(listItem.dataset[filterSelection] === filterBy){
-            listItem.style.display = "flex";
-        } else {
-            listItem.style.display = "none";
-        }
-        
-    }
+const track = document.querySelector('.carousel__track');
+const slides = Array.from(track.children);
+const nextButton = document.querySelector('.carousel__button--right');
+const prevButton = document.querySelector('.carousel__button--left');
+const dotsNav = document.querySelector('.carousel__nav');
+const dots = Array.from(dotsNav.children);
+
+const slideSize = slides[0].getBoundingClientRect();
+const slideWidth = slideSize.width;
+//console.log(slideWidth); 
+
+
+//slides[0].style.left = slideWidth * 0 + 'px';
+//slides[1].style.left = slideWidth + 1 + 'px';
+//slides[2].style.left = slideWidth * 2 + 'px';
+
+const setSlidePosition = (slide,index) => {
+    slide.style.left = slideWidth * index + 'px';
 }
 
-// this filter uses an if statement function that categories what ItemCardWrappers to display and what not to , if the filter category name is selected the item will be displayed shown as flex and none if not
+slides.forEach(setSlidePosition);
 
-function filterAll(){
-    let itemsToFilter = Array.from(document.getElementsByClassName("ItemCardWrapper"));
-    for(let listItem of itemsToFilter){
-        listItem.style.display = "flex";  
-    }
+const moveToSlide = (track, currentSlide, targetSlide) => {
+    track.style.transform = 'translateX(-' + targetSlide.style.left;
+    currentSlide.classList.remove('current-slide');
+    targetSlide.classList.add('current-slide');
 }
 
-//this filter function is for ALL the dishes to be displayed 
+const updateDots = (currentDot,targetDot) => {
+    currentDot.classList.remove('current-slide');
+    targetDot.classList.add('current-slide');
+    hideShowArrows(slides, prevButton, nextButton, targetIndex);
+}
 
+const hideShowArrows = (slides, prevButton, nextButton, targetIndex)
+
+// when I click left, move slides to the left
+prevButton.addEventListener('click', e => {
+    const currentSlide = track.querySelector('current-slide');
+    const prevSlide = currentSlide.previousElementSibling;
+    const currentDot = dotsNav.querySelector('.current-slide');
+    const prevDot = currentDot.prevElementSibling;
+    const prevIndext = slides.findIndex(slide => slide === prevSlide);
+    
+    moveToSlide(track, currentSlide, prevSlide);
+
+})
+
+
+// when I click right, move slides to the right 
+nextButton.addEventListener('click', e => {
+    const currentSlide = track.querySelector('current-slide');
+    const nextSlide = currentSlide.nextElementSibling;
+    const currentDot = dotsNav.querySelector('.current-slide');
+    const nextDot = currentDot.nextElementSibling;
+    const nextIndext = slides.findIndex(slide => slide === nextSlide);
+    
+    moveToSlide(track, currentSlide, nextSlide);
+    updateDots(currentDot,nextDot);
+    hideShowArrows(slides, prevButton, nextButton, targetIndex);
+});
+
+    // move to the next slide
+    track.style.transform = 'translateX(' + amountToMove + ')';
+    currentSlide.classList.remove('current-slide');
+    nextSlide.classList.add('current-slide');
+
+
+// when I click the nav indicators, move to that slide
+dotsNav.addEventListener('click', e => {
+
+    const targetDot = e.target.closest('button');
+
+    if (!targetDot) return;
+
+    const currentSlide = track.querySelector('.current-slide');
+    const currentDot = dotsNav.querySelector('.current-slide');
+    const targetIndex = dots.findIndex(dot => dot === targetDot)
+    console.log(targetIndex);
+
+    moveToSlide(track, currentSlide, targetSlide);
+    updateDots(currentDot, targetDot);
+    hideShowArrows(slides, prevButton, nextButton, targetIndex);
+
+    if (targetIndex === 0) {
+        prevButton.classList.add('is-hidden');
+        nextButton.classList.remove('is-hidden');
+    } else if (targetIndex === slides.length - 1) {
+        prevButton.classList.remove('is-hidden');
+        nextButton.classList.add('is-hidden');
+    } else {
+        prevButton.classList.remove('is-hiden');
+        nextButton.classList.remove('is-hidden');
+    }
+    
+})

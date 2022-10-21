@@ -15,99 +15,66 @@
 
     <body>
 
-        <h1>My Closet</h1>
-        
-        <h2>Filter by:</h2>
+     <div class="carousel">
+      <button class="carousel__button carousel__button--left">
+        <img src="images/left.png" alt="">
+      </button>
+      <div class="carousel__track-container">
+        <ul class="carousel__track">
+          <li class="carousel__slide">
+            <img class="carousel__image" src="images/lace.jpg" alt="">
+          </li>
+          <li class="carousel__slide">
+            <img class="carousel__image" src="images/sweater.jpg" alt="">
+          </li>
+          <li class="carousel__slide">
+            <img class="carousel__image" src="images/turtleneck.jpg" alt="">
+          </li>
+        </ul>
+      </div>
 
-        <div id="list-filter-wrapper">     
-    
-          <details class="FilterCategoryWrapper">
-            <summary>Item Type</summary>
-            <button class="FilterSelector" id="top" onclick='filterCategory("top", "yes")'>Tops</button>
-            <button class="FilterSelector" id="pant" onclick='filterCategory("pant", "yes")'>Pants</button>
-            <button class="FilterSelector" id="short" onclick='filterCategory("short", "yes")'>Shorts</button>
-            <button class="FilterSelector" id="dress" onclick='filterCategory("dress", "yes")'>Dresses</button>
-            <button class="FilterSelector" id="All" onclick='filterAll()'>All</button>
-        </div>
-        
-             
-        <hr />
-
-        <section id="item-list-wrapper">
-    
-          <div class="ItemCardWrapper"
-               data-dress="yes"
-            >
-               
-          <!-- list all data categories that apply to this specific item of clothing which is under tops category -->
-    
-            <img class="image-grid" src="images/dress.jpg" alt="dress"  />
-
-            <p class="ItemLocation">Hanging</p>
-
-           </div>
-
-            <div class="ItemCardWrapper"
-               data-top="yes"
-               
-          >
-            <img class="row" src="images/sweater.jpg" alt="sweater" />
-            
-            <p class="ItemLocation">Bottom right drawer</p>
-
-          </div>
-    
-          <div class="ItemCardWrapper"
-          data-short="yes"
-          
-         >
-          <img class="column" src="images/shorts.jpg" alt="jeanshorts" />
-       
-          <p class="ItemLocation">Bottom left drawer</p>
-
-         </div>
-
-        <div class="ItemCardWrapper"
-               data-top="yes"
-               
-          >
-            <img class="column" src="images/turtleneck.jpg" alt="turtleneck" />
-            
-            <p class="ItemLocation">In box</p>
-
-          </div>
-
-          <div class="ItemCardWrapper"
-          data-pant="yes"
-          
-        >
-          <img class="column" src="images/jeans.webp" alt="jeans" />
-       
-           <p class="ItemLocation">Top middle drawer</p>
-
-          </div>
-         <div class="ItemCardWrapper"
-          data-top="yes"
+      <button class="carousel__button carousel__button--right">
+      <img src="images/right.png" alt="">
+    </button>
      
->
-         <img class="column" src="images/strapless.jpg" alt="strapless" />
-  
-         <p class="ItemLocation">Hanging</p>
+      <div class="carousel__nav">
+        <button class="carousel__indicator current-slide"></button>
+        <button class="carousel__indicator"></button>
+        <button class="carousel__indicator"></button>
+      </div>
 
-        </div> 
+    </body>
 
-        <div class="ItemCardWrapper"
-        data-top="yes"
-
-        >
-        <img class="column" src="images/test.jpg" alt="test" />
-
-        <p class="ItemLocation">Test</p>
-
+    <body>
+      
+      <div class="carousel">
+        <button class="carousel__button carousel__button--left">
+          <img src="images/left.png" alt="">
+        </button>
+        <div class="carousel__track-container">
+          <ul class="carousel__track">
+            <li class="carousel__slide current-slide">
+              <img class="carousel__image" src="images/jeans.webp" alt="">
+            </li>
+            <li class="carousel__slide">
+              <img class="carousel__image" src="images/shorts.jpg" alt="">
+            </li>
+            <li class="carousel__slide">
+              <img class="carousel__image" src="images/jeans.webp" alt="">
+            </li>
+          </ul>
         </div>
-            
-            
-
+  
+        <button class="carousel__button carousel__button--right">
+        <img src="images/right.png" alt="">
+      </button>
+       
+        <div class="carousel__nav">
+          <button class="carousel__indicator current-slide"></button>
+          <button class="carousel__indicator"></button>
+          <button class="carousel__indicator"></button>
+        </div>
+  
     </body>
 
 </html>
