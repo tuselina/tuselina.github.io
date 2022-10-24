@@ -1,72 +1,83 @@
 .carousel {
-  position: relative;
-  height: 600px;
-  width:80%;
-  margin: 0 auto;
+    position: relative;
+    height: 600px;
+    width:80%;
+    margin: 0 auto;
+  
+  }
+  /** carousel container sizing and measurements **/
+  
+  .carousel__image {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+   /** carousel image sizing and measurements **/
+  
+  .carousel__track-container {
+    background: rgb(255, 255, 255);
+    height: 100%;
+    position: relative;
+  }
+   /** carousel horizontal row container position and colour **/
+  
+  .carousel__track {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+  
+  .carousel__slide {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+  }
+   /** carousel slide specs**/
 
-}
+  .carousel__button {
+    position: absolute;
+    top:50%;
+    transform: translateY(-50%);
+    background: transparent;
+    border: 0;
+  }
+   /** carousel left and right arrow buttons placement and visual specs to create transparent background **/
 
-.carousel__image {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-}
-
-.carousel__track-container {
-  background: rgb(255, 255, 255);
-  height: 100%;
-  position: relative;
-}
-
-.carousel__track {
-  padding: 0;
-  margin: 0;
-  list-style: none;
-}
-
-.carousel__slide {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  width: 100%;
-}
-
-.carousel__button {
-  position: absolute;
-  top:50%;
-  transform: translateY(-50%);
-  background: transparent;
-  border: 0;
-}
-
-.carousel__button--left {
-  left: -40px;
-}
-
-.carousel__button--right {
-  right: -40px;
-}
-
-.carousel__button img {
-  width: 12px;
-}
-
-.carousel__nav {
-  background: rgb(255, 255, 255);
-  display: flex;
-  justify-content: center;
-  padding: 10px 0;
-}
-
-.carousel__indicator {
-  border: 0;
-  border-radius: 50%; 
-  width: 15px;
-  height: 15px;
-  background: rgba(0, 0, 0, .3);
-  margin: 0 12px;
-}
-
-.carousel__indicator.current-slide {
-  background: rgba(0, 0, 0, .75)
-}
+  .carousel__button--left {
+    left: -40px;
+  }
+   /** carousel left button sizing  **/
+  
+  .carousel__button--right {
+    right: -40px;
+  }
+   /** carousel right button sizing  **/
+  
+  .carousel__button img {
+    width: 12px;
+  }
+   /** carousel button image width size indicator **/
+  
+  .carousel__nav {
+    background: rgb(255, 255, 255);
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+  }
+   /** carousel navigation dots colour and placement in center **/
+  
+  .carousel__indicator {
+    border: 0;
+    border-radius: 50%; 
+    width: 15px;
+    height: 15px;
+    background: rgba(0, 0, 0, .3);
+    margin: 0 12px;
+  }
+   /** carousel navigation indicators of dotted shape, colour and size **/
+  
+  .carousel__indicator.current-slide {
+    background: rgba(0, 0, 0, .75)
+  }
+ /** carousel navigation dots are coloured darker when on the current slide **/
